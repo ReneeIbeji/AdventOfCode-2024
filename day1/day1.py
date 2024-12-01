@@ -22,10 +22,11 @@ def part1(file):
 
     list1.sort()
     list2.sort()
+    pairs = zip(list1,list2)
 
     totalDistance = 0
-    for i in range(len(list1)):
-        totalDistance += abs(list2[i] - list1[i])
+    for pair in pairs:
+        totalDistance += abs(pair[0] - pair[1])
 
     return totalDistance
 
